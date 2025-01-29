@@ -22,7 +22,7 @@ const NavBar = () => {
   return (
     <div className="navbar bg-primary text-primary-content">
         <div className="flex-1">
-            <Link to="/" className="btn btn-ghost text-xl">DevTinder</Link>
+            <Link to="/feed" className="btn btn-ghost text-xl">DevTinder</Link>
         </div>
         <div className="flex-none gap-2">
             <div className="form-control"></div>
@@ -41,10 +41,11 @@ const NavBar = () => {
                 <li>
                 <Link to = "/profile" className="justify-between">
                     Profile
-                    <span className="badge">New</span>
                 </Link>
                 </li>
-                <li><a>Settings</a></li>
+                <li>
+                    <Link to="connections">Connections</Link>
+                </li>
                 <li><a onClick={handaleLogout}>Logout</a></li>
             </ul>
             </div>)}
