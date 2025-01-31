@@ -22,7 +22,7 @@ const Login = () => {
                 },
                 { withCredentials: true }
             );
-            dispatch(addUser(res.data.data));
+            dispatch(addUser(res?.data?.data));
             return navigate("/");
         } catch(error) {
             setError(error?.response?.data);
